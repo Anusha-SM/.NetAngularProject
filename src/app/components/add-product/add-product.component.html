@@ -1,0 +1,32 @@
+
+<h1 align="center">Product Entry</h1>
+<form action="" style="text-align: center;">
+    <div>
+        <label>Product ID</label>
+        <input type="text" [(ngModel)]="productData.id" name="id"/>
+    </div><br>
+    <div>
+        <label>Product Name</label>
+        <input type="text" [(ngModel)]="productData.name" name="name"/>
+    </div><br>
+    <div>
+        <label>Product Type</label>
+        <input type="text" [(ngModel)]="productData.productType" name="producttype"/>
+    </div><br>
+    <div>
+        <label>Product Description</label>
+        <input type="text" [(ngModel)]="productData.description" name="description"/>
+    </div><br>
+    <div>
+        <label>Product Price</label>
+        <input type="text" [(ngModel)]="productData.price" name="price"/>
+    </div><br>
+    <div class="input-container">
+        <input type="button" value="Save" (click)="addProduct()"/>
+        <input type="button" value="Reset"(click)="resetProduct()"/>
+    </div>
+</form>
+<hr>
+<app-productlist (productDataEmitter)="getProductData($event)" [productlistdata]="productlist"></app-productlist> <!-- //child component -->
+
+<!--<app-productlist [productlistdetails]="childData"($event)></app-productlist>  // parent component this is used for output parameter-->
