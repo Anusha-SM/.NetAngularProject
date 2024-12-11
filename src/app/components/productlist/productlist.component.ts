@@ -14,14 +14,6 @@ export class ProductlistComponent {
 
   }
   
-  /*@Output() productlistdetails=new EventEmitter<string>();
- Here this method is used for output parameter
- public btnClick():void{
-  this.productlistdetails.emit("This text is from child component");
- }
-  ngOnInit():void{
-}*/
-
 editProduct(id:any){
   alert(id);
   this.productservice2.getById(id).subscribe({

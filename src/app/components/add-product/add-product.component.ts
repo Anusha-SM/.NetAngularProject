@@ -76,10 +76,4 @@ export class AddProductComponent implements OnInit {
    this.productData=e;
 
  }
-
- /*this method is for output parameter
- public childData($event:any): void
- {
-  console.log($event);
- }*/
 }
